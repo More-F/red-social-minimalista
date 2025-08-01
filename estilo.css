@@ -1,6 +1,6 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #f0f4f8, #e2ebf3);
+  background: linear-gradient(135deg, #b6d9fc, #e2ebf3);
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png"); /* textura sutil */
   margin: 0;
   padding: 20px;
@@ -18,8 +18,8 @@ body {
 
 /* Formulario */
 form {
-  background: white;
-  padding: 25px;
+  background: rgb(255, 255, 255);
+  padding: 50px;
   border-radius: 12px;
   max-width: 500px;
   margin: 0 auto 40px;
