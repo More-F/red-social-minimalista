@@ -1,93 +1,128 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f3f4f6;
+  background: linear-gradient(135deg, #f0f4f8, #e2ebf3);
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png"); /* textura sutil */
   margin: 0;
   padding: 20px;
+  animation: fondoMovimiento 20s infinite alternate;
+}
+
+@keyframes fondoMovimiento {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
 }
 
 /* Formulario */
 form {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
   max-width: 500px;
-  margin: 0 auto 30px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto 40px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   gap: 15px;
+  border: 1px solid #e0e0e0;
 }
 
 form label {
   font-weight: bold;
+  color: #333;
 }
 
 form input[type="text"],
 form textarea,
 form input[type="file"] {
-  padding: 10px;
+  padding: 12px;
   font-size: 1rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 6px;
   width: 100%;
+  transition: border 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #007bff;
+  outline: none;
 }
 
 form button {
   background-color: #28a745;
   color: white;
   border: none;
-  padding: 10px;
-  border-radius: 6px;
+  padding: 12px;
+  border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 form button:hover {
   background-color: #218838;
+  transform: scale(1.03);
 }
 
 /* Contenedor de publicaciones */
 #feedPublicaciones {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
 }
 
-/* Tarjeta de publicación */
+/* Animación de entrada */
 .tarjetainf {
-  background-color: #fff;
-  padding: 15px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ddd;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .tarjetainf img {
   width: 100%;
-  max-height: 300px;
+  max-height: 320px;
   object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  border-radius: 10px;
+  margin-bottom: 12px;
 }
 
 .tarjetainf h2 {
-  margin: 0 0 10px;
-  font-size: 1.4rem;
-  color: #333;
+  margin: 0 0 8px;
+  font-size: 1.5rem;
+  color: #222;
 }
 
 .tarjetainf p {
-  margin: 0 0 10px;
+  margin: 0 0 12px;
   color: #555;
+  line-height: 1.5;
 }
 
 /* Likes */
 .like {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   font-size: 1rem;
 }
 
@@ -95,8 +130,8 @@ form button:hover {
   background-color: #007bff;
   color: white;
   border: none;
-  padding: 6px 12px;
-  border-radius: 5px;
+  padding: 8px 16px;
+  border-radius: 6px;
   cursor: pointer;
   transition: transform 0.2s, background-color 0.3s;
 }
@@ -107,7 +142,7 @@ form button:hover {
 }
 
 .botonlike.like {
-  background-color: #dc3545; /* cambia a rojo si ya se dio like */
+  background-color: #dc3545;
 }
 
 .Contador {
