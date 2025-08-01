@@ -6,7 +6,18 @@ body {
   padding: 20px;
   animation: fondoMovimiento 20s infinite alternate;
 }
-
+.tituloPagina {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  background: linear-gradient(90deg, #6c5ce7, #74b9ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: entradaTitulo 1s ease-out forwards;
+}
 @keyframes fondoMovimiento {
   0% {
     background-position: 0% 0%;
@@ -18,7 +29,7 @@ body {
 
 /* Formulario */
 form {
-  background: rgb(255, 255, 255);
+  background: rgb(227, 243, 240);
   padding: 50px;
   border-radius: 12px;
   max-width: 500px;
